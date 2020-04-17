@@ -14,6 +14,22 @@
     <div>
         <span id="qtd"></span> pessoas infectadas
     </div>
+    <div class="cadastroDezenas">
+      <label class="textoCadastro">Registre aqui suas dezenas rezadas!</label>
+      <div class="row">
+        <div class="formulario">
+          <input 
+            type="number"
+            class="form-control my-input"
+            id="inputDezenas"
+            min="1"
+            max="20"
+            >
+        </div>
+        <button type="submit" class="btn btn-outline-danger my-btn" onclick="submitDezenas()">Enviar</button>
+      </div>
+      <span id="feedback"></span>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

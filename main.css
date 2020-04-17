@@ -1,7 +1,36 @@
 @import url('https://use.typekit.net/lhl6ylv.css');
 
 body {
-    background: black;
+    background: #1c1c1c;
     color: white;
     font-family: 'myriad-pro';
+}
+
+
+.formulario {
+  width: 130px;
+}
+
+.my-input {
+  width: 90px;
+  border-color: #cecece;
+  background-color: #1c1c1c;
+  color: #cecece;
+  text-align: center;
+  position: relative;
+}
+
+.my-input:hover {
+  background-color: #1c1c1c;
+  color: #cecece;
+}
+
+.my-input:focus {
+  background-color: #1c1c1c;
+  color: #cecece;
+}
+
+.my-btn {
+  background-color: #1c1c1c;
+  cursor: pointer;
 }

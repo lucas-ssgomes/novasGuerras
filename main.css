@@ -1,7 +1,54 @@
 @import url('https://use.typekit.net/lhl6ylv.css');
 
 body {
-    background: black;
-    color: white;
+    background: #1c1c1c;
+    color: #cecece;
     font-family: 'myriad-pro';
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+.text-red {
+    color: #e13c39;
+}
+
+.image img {
+    height: 7vw;
+    max-height: 60px;
+    min-height: 30px;
+}
+
+.formulario {
+  width: 130px;
+}
+
+.my-input {
+  width: 90px;
+  border-color: #cecece;
+  background-color: #1c1c1c;
+  color: #cecece;
+  text-align: center;
+  position: relative;
+}
+
+.my-input:hover,
+.my-input:focus {
+  background-color: #1c1c1c;
+  color: #cecece;
+}
+
+.my-btn {
+  background-color: #1c1c1c;
+  cursor: pointer;
 }

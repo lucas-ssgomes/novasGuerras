@@ -1,7 +1,20 @@
 @import url('https://use.typekit.net/lhl6ylv.css');
 
 body {
-    background: black;
-    color: white;
+    background: #1c1c1c;
+    color: #cecece;
     font-family: 'myriad-pro';
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+.text-red {
+    color: #e13c39;
 }

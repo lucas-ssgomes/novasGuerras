@@ -23,6 +23,12 @@ p {
     color: #e13c39;
 }
 
+.image img {
+    height: 7vw;
+    max-height: 60px;
+    min-height: 30px;
+}
+
 .formulario {
   width: 130px;
 }

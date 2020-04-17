@@ -7,6 +7,10 @@ body {
     font-size: 18px;
 }
 
+h2 {
+    font-size: 24px;
+}
+
 h3 {
     font-size: 20px;
 }
@@ -32,11 +36,7 @@ p {
   position: relative;
 }
 
-.my-input:hover {
-  background-color: #1c1c1c;
-  color: #cecece;
-}
-
+.my-input:hover,
 .my-input:focus {
   background-color: #1c1c1c;
   color: #cecece;

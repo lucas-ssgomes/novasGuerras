@@ -7,31 +7,16 @@ body {
     font-size: 18px;
 }
 
-#image {
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-}
-
-.fundo {
-    position: relative;
-    display: grid;
-
-}
-
-.title {
-    position: absolute;
-}
-
 .header {
-    background-image: url('assets/img/fundo3.jpg');
+    background: linear-gradient(#1c1c1c00, #1c1c1c), url('assets/img/fundo3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    /*-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));       
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
 }
 
-h1 {
-    font-size: 150px;
+.footer {
+    background: linear-gradient(#1c1c1c, #1c1c1c00), url('assets/img/fundo3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h2 {
@@ -46,8 +31,40 @@ p {
     text-align: justify;
 }
 
+h1 {
+    font-size: 60px;
+}
+
 .subtitle {
-    font-size: 23px;
+    font-size: 18px;
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 80px;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 100px;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 140px;
+    }
+    
+    .subtitle {
+        font-size: 20px;
+    }
 }
 
 .cover {
@@ -99,3 +116,17 @@ p {
     background-color: #e13c39;
     color: #cecece;
   }
+
+@media (max-width: 574px) {
+    .footer-copy,
+    .footer-lema {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media (min-width: 576px) {
+    .footer-lema {
+        float: right;
+    }
+}

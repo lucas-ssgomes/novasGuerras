@@ -121,6 +121,10 @@ h1 {
     }
 }
 
+.forms-dezenas {
+    height: 50px;;
+}
+
 .my-input {
   border-color: #cecece;
   background-color: #1c1c1c;
@@ -136,16 +140,17 @@ h1 {
 }
 
 .my-btn {
-  background-color: #1c1c1c;
+  background-color: #e13c39;
   border-color: #e13c39;
-  color: #e13c39;
+  color: #cecece;
   cursor: pointer;
 }
 
 .my-btn:hover,
 .my-btn:focus {
     background-color: #e13c39;
-    color: #cecece;
+    color: #1c1c1c;
+    font-weight: 700;
 }
 
 .footer {

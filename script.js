@@ -6,9 +6,9 @@ function submitDezenas() {
   const dezenas = jQuery('#inputDezenas').val();
   if (dezenas < 1 || dezenas > 20) {
     jQuery('#inputDezenas').css("border-color", "#e13c39");
-    jQuery('#feedback').text("O número de dezenas deve estar entre 1 e 20.");
+    jQuery('#feedback').text("O número de dezenas deve estar entre 1 e 20. Se você rezou mais do que isso, insira separadamente os números!");
     jQuery('#feedback').css("color", "#e13c39");
-    jQuery('#feedback').delay(5000).fadeOut("normal", function () {
+    jQuery('#feedback').delay(8000).fadeOut("normal", function () {
       jQuery(this).text("");
       jQuery('#inputDezenas').css("border-color", "#cecece");
     });
@@ -30,7 +30,7 @@ function submitDezenas() {
         jQuery('#feedback').text("Dezenas registradas com sucesso!");
         jQuery('#feedback').css("color", "#4fc2a5");
 
-        jQuery('#feedback').delay(5000).fadeOut("normal", function () {
+        jQuery('#feedback').delay(8000).fadeOut("normal", function () {
           jQuery(this).text("");
         });
       },

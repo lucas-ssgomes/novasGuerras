@@ -153,6 +153,11 @@ h1 {
     font-weight: 700;
 }
 
+.img-text {
+    width: 100%;
+    height: auto;
+}
+
 .footer {
     background: linear-gradient(#1c1c1c, #1c1c1c00), url('assets/img/fundo.jpg');
     background-repeat: no-repeat;

@@ -7,6 +7,33 @@ body {
     font-size: 18px;
 }
 
+#image {
+    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.fundo {
+    position: relative;
+    display: grid;
+
+}
+
+.title {
+    position: absolute;
+}
+
+.header {
+    background-image: url('assets/img/fundo3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));       
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));*/
+}
+
+h1 {
+    font-size: 150px;
+}
+
 h2 {
     font-size: 24px;
 }
@@ -18,6 +45,15 @@ h3 {
 p {
     text-align: justify;
 }
+
+.subtitle {
+    font-size: 23px;
+}
+
+.cover {
+    padding: 0 1.5rem;
+  }
+  
 
 .text-red {
     color: #e13c39;

@@ -1,31 +1,35 @@
+Number.prototype.format = function () {
+  return this.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+};
 
 function submitDezenas() {
-  const inputField = document.querySelector('#inputDezenas');
-  const dezenas = inputField.value;
-  const feedback = document.querySelector('#feedback');
+  const dezenas = jQuery('#inputDezenas').val();
   if (dezenas < 1 || dezenas > 20) {
-    inputField.style.borderColor = "#e13c39";
-    feedback.textContent = "O número de dezenas deve estar entre 1 e 20.";
-    feedback.style.color = '#e13c39';
+    jQuery('#inputDezenas').css("border-color", "#e13c39");
+    jQuery('#feedback').text("O número de dezenas deve estar entre 1 e 20.");
+    jQuery('#feedback').css("color", "#e13c39");
   } else {
-    inputField.style.borderColor = "#cecece";
-    inputField.value = '';
+    jQuery('#inputDezenas').css("border-color", "#cecece");
+    jQuery('#inputDezenas').val("");
+
     jQuery.ajax({
       type: 'POST',
       url: 'https://corona-nsg-jumasbrasil.herokuapp.com/registrar',
-      data: {quantidade: dezenas},
+      data: { quantidade: dezenas },
       success: function (data) {
-        console.log(data);
+        var result = JSON.parse(JSON.stringify(data));
+        var num = result.infected;
+        jQuery("#qtd-corona").text(num.format());
       },
       error: function (data) {
         console.log(data['responseJSON']['error']);
       }
-  });
-    feedback.textContent = "Dezenas registradas com sucesso!";
-    feedback.style.color = '#008000';
-    console.log(dezenas);
+    });
+
+    jQuery('#feedback').text("Dezenas registradas com sucesso!");
+    jQuery('#feedback').css("color", "#4fc2a5");
   }
-  
+
 }
 
 jQuery.ajax({
@@ -34,12 +38,10 @@ jQuery.ajax({
   success: function (data) {
 
     var result = JSON.parse(JSON.stringify(data));
-
-    jQuery("#qtd-corona").text(result.infected);
+    var num = result.infected;
+    jQuery("#qtd-corona").text(num.format());
   }
 });
-
-var dezenas;
 
 jQuery.ajax({
   type: 'GET',
@@ -47,7 +49,7 @@ jQuery.ajax({
   success: function (data) {
 
     var result = JSON.parse(JSON.stringify(data));
-
-    jQuery("#qtd-dezenas").text(result.quantidade);
+    var num = result.quantidade;
+    jQuery("#qtd-dezenas").text(num.format());
   }
 });

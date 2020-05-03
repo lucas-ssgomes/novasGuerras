@@ -4,9 +4,9 @@ Number.prototype.format = function () {
 
 function submitDezenas() {
   const dezenas = jQuery('#inputDezenas').val();
-  if (dezenas < 1 || dezenas > 20) {
+  if (dezenas < 1 || dezenas > 100) {
     jQuery('#inputDezenas').css("border-color", "#e13c39");
-    jQuery('#feedback').text("O número de dezenas deve estar entre 1 e 20. Se você rezou mais do que isso, insira separadamente os números!");
+    jQuery('#feedback').text("O número de dezenas deve estar entre 1 e 100. Se você rezou mais do que isso, insira separadamente os números!");
     jQuery('#feedback').css("color", "#e13c39");
     jQuery('#feedback').delay(8000).fadeOut("normal", function () {
       jQuery(this).text("");
